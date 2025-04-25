@@ -25,7 +25,7 @@ public class Exam2
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void exampleMethod()
+    public void stringComparison()
     {
         //Question 24
         
@@ -36,11 +36,11 @@ public class Exam2
         //(b)
         if (first.equals(second))
         {
-            System.out.println("successful");
+            System.out.println("successful"); //(c)
         }
         else
         {
-            System.out.println("failed");
+            System.out.println("failed"); //(c)
         }
     }
     
