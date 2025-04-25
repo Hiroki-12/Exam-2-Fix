@@ -83,6 +83,7 @@ public class Exam2
         
         //Question 27
         Collections.sort(temperatures);
+        System.out.println("Highest Temperature: " + temperatures.get(temperatures.size()-1));
     }
      
 }
