@@ -1,4 +1,5 @@
-
+import java.util.ArrayList;
+import java.util.Collections;
 /**
  * Write a description of class Exam2 here.
  *
@@ -17,6 +18,18 @@ public class Exam2
     {
         // initialise instance variables
         x = 0;
+        
+        ArrayList<Double> temperatures = new ArrayList<Double>();
+        
+        temperatures.add(37.5);
+        temperatures.add(34.0);
+        temperatures.add(32.0);
+        temperatures.add(37.0);
+        temperatures.add(47.0);
+        temperatures.add(38.0);
+        temperatures.add(39.0);
+        
+        fever(temperatures);
     }
 
     /**
@@ -47,29 +60,29 @@ public class Exam2
     /**
      * Question 25
      */
-    public void temperatures(Temperature[])
+    public void fever(ArrayList<Double> temperatures)
     {
-        int i = 0;
+        int fevers = 0;
         double max = 0;
-        for (double temperature : Temperature)
+        for (int i = 0; i < temperatures.size(); i++)
         {
-            if (temperature > 37.5)
+            if (temperatures.get(i) > 37.5)
             {
-                i++;
+                fevers++;
             }
             
-            if (temperature > max)
+            if (temperatures.get(i) > max)
             {
-                max = temperature;
+                max = temperatures.get(i);
             }
         }
-        System.out.println(i + " Highest temp: " + max);
+        System.out.println("There are " + fevers + " people with a fever. " + " Highest temperature: " + max);
         
         //Question 26
-        System.out.println(Collections.max(Temperature[]));
+        System.out.println("Highest Temperature: " + Collections.max(temperatures));
         
         //Question 27
-        Collections.sort(Temperature[]); //I wrote "And then you need to print the last value of the Arraylist".
+        Collections.sort(temperatures);
     }
      
 }
